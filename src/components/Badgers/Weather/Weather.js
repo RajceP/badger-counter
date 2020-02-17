@@ -24,7 +24,7 @@ const Weather = () => {
           }
           alt={weather.data.consolidated_weather[0].weather_state_abbr}
         />
-        <p style={{ fontWeight: 'bold' }}>{weather.data.consolidated_weather[0].the_temp} °C</p>
+        <p style={{ fontWeight: 'bold' }}>{weather.data.consolidated_weather[0].the_temp.toFixed(1)} °C</p>
       </div>
     );
   } else {
