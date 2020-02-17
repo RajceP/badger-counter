@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Weather = () => {
-  const [weather, setWeather] = useState(null);
+  const [weather, setWeather] = useState();
 
   useEffect(() => {
     axios
@@ -12,12 +12,19 @@ const Weather = () => {
       });
   }, []);
 
-  console.log(weather);
-
   if (weather) {
     return (
       <div>
-        <p style={{fontWeight: 'bold'}}>{weather.data.consolidated_weather[0].the_temp} °C</p>
+        <img
+          style={{ height: '50px' }}
+          src={
+            'https://www.metaweather.com/static/img/weather/' +
+            weather.data.consolidated_weather[0].weather_state_abbr +
+            '.svg'
+          }
+          alt={weather.data.consolidated_weather[0].weather_state_abbr}
+        />
+        <p style={{ fontWeight: 'bold' }}>{weather.data.consolidated_weather[0].the_temp} °C</p>
       </div>
     );
   } else {
