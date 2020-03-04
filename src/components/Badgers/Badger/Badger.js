@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Badger = () => {
-  const style = {
-    display: 'inline-block',
-    padding: '6px'
-  };
+import './Badger.css';
 
-  return <span role="img" aria-label="badger" style={style}>🦡</span>;
+const Badger = () => {
+  return (
+    <span className="Badger" role="img" aria-label="badger">
+      🦡
+    </span>
+  );
 };
 
 export default Badger;

@@ -14,7 +14,6 @@
   }
 }
 
-
 button {
   border: none;
   background: #404040;
@@ -25,10 +24,5 @@ button {
   border-radius: 6px;
   display: inline-block;
   transition: all 0.3s ease 0s;
+  cursor: pointer;
 }
-
-button:hover {
-  background-color: #402000 !important;
-  transition: all 0.3s ease 0s;
-}
-
