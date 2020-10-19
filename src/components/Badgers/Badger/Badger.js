@@ -1,6 +1,6 @@
-import React from 'react';
-
 import './Badger.css';
+
+import React from 'react';
 
 const Badger = () => {
   return (

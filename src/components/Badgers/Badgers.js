@@ -2,17 +2,20 @@ import React from 'react';
 
 import Badger from './Badger/Badger';
 
-const Badgers = props => {
-  let badgers = [];
+const Badgers = ({ count, click }) => {
+  const badgers = [];
 
-  [...Array(props.count)].map((_badger, i) => {
+  [...Array(count)].map((_badger, i) => {
+    // eslint-disable-next-line react/no-array-index-key
     return badgers.push(<Badger key={i} />);
-  })
+  });
 
   return (
     <div>
-      <p>Tvůj majetek činí {props.count} jezevečků! </p>
-      <button onClick={props.click}>Přidat jezevečka</button>
+      <p>Tvůj majetek činí {count} jezevečků! </p>
+      <button type="button" onClick={click}>
+        Přidat jezevečka
+      </button>
       <div className="Badger">{badgers}</div>
     </div>
   );
